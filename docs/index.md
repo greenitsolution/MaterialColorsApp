@@ -2,7 +2,7 @@
 
 A handy little Cross-Platform app that gives you quick access to the standard material design color palette.
 
-<img src="MaterialColorsApp.png" width="300" alt="Screenshot">
+<img src="https://github.com/greenitsolution/MaterialColorsApp/raw/master/MaterialColorsApp.png" width="300" alt="Screenshot">
 
 **[Download for Mac](https://github.com/romannurik/MaterialColorsApp/releases)** - 
 **[Download for Linux](https://github.com/greenitsolution/MaterialColorsApp/releases)**
