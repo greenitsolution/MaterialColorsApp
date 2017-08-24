@@ -105,7 +105,7 @@ function updateUiMode() {
   // Build or teardown tray
   if (isTrayMode) {
     if (!trayIcon) {
-      trayIcon = new electron.Tray(__dirname + '/assets/TrayIconTemplate.png');
+      trayIcon = new electron.Tray(__dirname + '/assets/TrayIconTemplateWhite.png');
       trayIcon.setToolTip(app.getName());
       trayIcon.on('right-click', () => {
         mainWindow[mainWindow.isVisible() ? 'hide' : 'show']();

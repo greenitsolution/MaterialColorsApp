@@ -1,0 +1,21 @@
+{
+  "arch": "amd64",
+  "bin": "Material Colors",
+  "categories": [
+    "Utility"
+  ],
+  "lintianOverrides": [
+    "changelog-file-missing-in-native-package"
+  ],
+  "name": "materialcolors",
+  "src": "dist/Material Colors-linux-x64/",
+  "dest": "dist/LinuxInstaller/",
+  "description": "A handy little Cross-Platform app that gives you quick access to the standard material design color palette. GitHub repo: https://git.io/v5Uye",
+  "homepage": "https://git.io/v5Uye",
+  "icon": "icon_128x128x32.png",
+  "maintainer": "Green IT Solution <https://git.io/v5UDx>",
+  "productName": "Material Colors",
+  "productDescription": "A quick color palette for material design colors.",
+  "section": "utils",
+  "version": "1.1.0"
+}

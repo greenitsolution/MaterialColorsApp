@@ -22,7 +22,6 @@ const del = require('del');
 const merge = require('merge-stream');
 const runSequence = require('run-sequence');
 const electronPackager = require('electron-packager');
-const electronOsxSign = require('electron-osx-sign');
 const argv = require('yargs').argv;
 const fs = require('fs');
 
@@ -107,11 +106,11 @@ gulp.task('dist', ['build', 'install-packages'], function(cb) {
     'dir': 'build',
     'out': 'dist',
     'asar': true,
-    'platform': 'darwin',
+    'platform': 'linux',
     'app-bundle-id': packageInfo.appBundleId,
     'app-category-type': 'app-category-type=public.app-category.developer-tools',
     'app-version': packageInfo.version,
-    'icon': 'icon.icns',
+    'icon': 'icon_128x128x32.png',
     'name': packageInfo.appDisplayName,
     'overwrite': true,
   }, (err, appPath) => {
@@ -120,32 +119,6 @@ gulp.task('dist', ['build', 'install-packages'], function(cb) {
       cb();
       return;
     }
-
-    // Modify plist to hide from Dock by default
-    let appFilePath = `${appPath}/${packageInfo.appDisplayName}.app`;
-    let plistStream = gulp.src(`${appFilePath}/Contents/Info.plist`)
-        .pipe($.plist({
-          NSUIElement: 1,
-          CFBundleShortVersionString: ''
-        }))
-        .pipe(gulp.dest(`${appFilePath}/Contents`));
-
-    plistStream.on('end', () => {
-      // Sign the app
-      electronOsxSign({
-        app: appFilePath,
-        identity: 'Developer ID Application: Roman NURIK (NLACF347G7)',
-        platform: 'darwin'
-      }, (err) => {
-        if (err) {
-          console.error(err);
-          cb();
-          return;
-        }
-
-        cb();
-      });
-    });
   });
 });
 

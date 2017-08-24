@@ -1,10 +1,11 @@
-# Material Colors for Mac
+# Material Colors for Linux (Ubuntu)
 
-A handy little Mac app that gives you quick access to the standard material design color palette.
+A handy little Cross-Platform app that gives you quick access to the standard material design color palette.
 
-<img src="https://d13yacurqjgara.cloudfront.net/users/6295/screenshots/2594885/colors_2x.png" width="300" alt="Screenshot">
+<img src="MaterialColorsApp.png" width="300" alt="Screenshot">
 
-**[Download the app](https://github.com/romannurik/MaterialColorsApp/releases/download/v1.1.0/MaterialColors-1.1.0.zip)**
+**[Download for Mac](https://github.com/romannurik/MaterialColorsApp/releases)** - 
+**[Download for Linux](https://github.com/greenitsolution/MaterialColorsApp/releases)**
 
 ## Build instructions
 
